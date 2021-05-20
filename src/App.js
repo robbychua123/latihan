@@ -7,8 +7,14 @@ function App() {
     const [active,setActive]=useState(0)
     
     const click=function(id){
-        setActive(0)
+        
         setCount(id)
+    }
+    const reset=function(){
+        for(let i=1;i<idx.length+1;i++){
+            document.getElementById(i).style.background="gray"
+        }
+        
     }
     
     useEffect(()=>{
@@ -52,6 +58,7 @@ function App() {
         <div>
             {listItems}
             <button onClick={()=>setActive(1)}>Click Here</button>
+            <button onClick={()=>reset()}>Reset</button>
         </div>
     )
 }
