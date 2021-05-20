@@ -14,9 +14,11 @@ function App() {
         for(let i=1;i<idx.length+1;i++){
             document.getElementById(i).style.background="gray"
         }
+        setCount(0)
+        setActive(0)
         
     }
-    
+       
     useEffect(()=>{
         if(count===0){
             
